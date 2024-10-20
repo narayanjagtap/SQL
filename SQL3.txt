@@ -1,0 +1,15 @@
+-- create databases
+create database db;
+create database db;	-- this line showes error because db database already present.
+create database if not exists db;	-- this line shows only warnning
+
+-- drop databases
+drop database db1;	-- this line show error because db1 database are not exist
+drop database if exists db1;	-- now shows only wornning
+drop database if exists db; 
+
+-- show databases
+show databases;
+
+-- show tables
+show tables;

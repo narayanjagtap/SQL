@@ -1,0 +1,27 @@
+create database collage2;
+use collage2;
+
+-- Foreign key implementation
+CREATE TABLE Dept ( 	-- parent table
+	id int primary key,
+    name varchar(50)
+);
+insert into dept value(101, "Computer");
+insert into dept value(102, "IT");
+
+select * from dept;
+
+CREATE TABLE teacher ( 	-- child table
+	id int primary key,
+    name varchar(50),
+    dept_id int,
+    foreign key (dept_id) references dept(id)	-- to create Foreign key
+    on update cascade
+    on delete cascade	-- update and delete cascading for FK.
+);
+insert into teacher 
+values
+(1, "Sagar", 101),
+(2, "Sumit", 102);
+
+select * from teacher;

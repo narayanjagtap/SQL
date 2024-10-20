@@ -1,0 +1,34 @@
+-- create database 
+create database Family;
+
+-- show databases
+show databases;
+
+-- Now i create a database and drop it
+create database f;
+drop database if exists f;
+
+-- create a table in Family database
+use family;	-- sql quries NOT case sencetive
+create table members(
+	Name varchar(50),
+    Age int NOT NULL,
+    RollNo int primary key		-- primary key = (NOT NULL) U (unique)
+);
+
+-- Insert data in above column
+-- insert no. of rows in one time
+insert into members
+	(Name, Age, RollNo)
+values
+	("Dada", 45, 1),
+    ("Aai", 34, 2),
+    ("me", 21, 3),
+    ("Didi", 20, 4);
+
+select * from members;
+
+-- insert data row wise / one row insert one time
+insert into members values ("Sagar", 18, 5);
+
+select * from members;

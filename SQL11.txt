@@ -1,0 +1,58 @@
+create database collage1;
+use collage1;
+
+CREATE TABLE student ( 
+	rollno INT PRIMARY KEY, 
+    name VARCHAR(50), 
+    marks INT NOT NULL, 
+    grade VARCHAR(1), 
+    city VARCHAR(20) 
+);
+
+INSERT INTO student 
+	(rollno, name, marks, grade, city) 
+    VALUES 
+    (101, "anil", 78, "C", "Pune"), 
+    (102, "bhumika", 93, "A", "Mumbai"), 
+    (103, "chetan", 85, "B", "Mumbai"), 
+    (104, "dhruv", 96, "A", "Delhi"), 
+    (105, "emanuel", 12, "F", "Delhi"), 
+    (106, "farah", 82, "B", "Delhi"
+);
+
+show tables;
+
+-- Table Related Queries
+
+alter table student	-- add column in student column
+ADD column age int;
+
+select * from student;
+
+ALTER TABLE student	-- change the table name
+RENAME TO Student1;
+
+show tables;
+
+alter table student	-- drop column instudent table
+drop column age;
+
+select * from student;
+
+alter table student	-- add column in table
+add column age int not null default 19;
+
+select * from student;
+
+alter table student	-- modify column datatype
+modify column age varchar(200);
+
+select * from student;
+
+alter table student	-- change the coloum name
+change age stu_age int;
+
+select * from student;
+
+alter table student	-- to drop column stu_age from student
+drop column stu_age;

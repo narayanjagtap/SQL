@@ -1,0 +1,15 @@
+-- Constraints in SQL
+create database Temp;
+use temp;
+
+-- 'UNIQUE' AND 'NOT NULL' Constraints in SQL
+create table temp1(
+	id int unique,	-- id column store only unique values
+    sallary int NOT NULL	-- sallary doesn't have NULL value
+);
+
+insert into temp1 value(1,50000);
+insert into temp1 value(2,60000);
+insert into temp1 value(3,70000);
+
+SELECT * FROM TEMP1;

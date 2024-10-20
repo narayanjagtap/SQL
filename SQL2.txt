@@ -1,0 +1,17 @@
+-- createing tables in database
+
+use collage;	-- select database for create tablecollage
+
+create table student(
+	Name varchar(50),
+	RollNo int primary key,	-- in RollNO row not have NULL value
+    Reg_Num int NOT NULL
+);
+
+-- insert data in Tables
+insert into student values("Narayan", 1,45642);
+insert into student value("Sagar", 2, 5878578);
+insert into student value("Pratap", 3, 7892);
+insert into student value("Dada", 4, 123);
+
+select * from student;

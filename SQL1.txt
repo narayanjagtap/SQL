@@ -1,0 +1,11 @@
+-- create databases
+create database temp1;
+create database temp2;
+create database collage;
+
+-- drop databases
+drop database temp1;
+drop database temp2;
+
+-- show databases
+show databases;

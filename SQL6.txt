@@ -1,0 +1,26 @@
+create database if NOT exists temp;
+use temp;
+
+-- 'PRIMARY KEY' constraints in SQL
+create table temp2(
+	id int PRIMARY KEY,
+    name varchar(100) NOT NULL
+);
+insert into temp2 value(1, "Narayan");
+insert into temp2 value(2, "Sagar");
+insert into temp2 value(3, "DADA");
+
+select * from temp2;
+
+-- create new table in Temp database
+create table temp3(
+	id int,
+    name varchar(50),
+    age int, 
+    city varchar(50),
+    primary key(id,name)	-- combination of twos columns are alwayas unique and NOT NULL.
+);
+insert into temp3 value(1,"Narayan",21,"latur");
+insert into temp3 value(2,"Sagar",18,"latur");
+
+select * from temp3;

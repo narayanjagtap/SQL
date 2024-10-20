@@ -1,0 +1,24 @@
+-- DEFAULT constraint
+create database if not exists temp;
+use temp;
+
+create table temp4 (
+	empID int,
+    salary int default 40000
+);
+
+insert into temp4 value(2,80000);
+insert into temp4 (empID) values(1);	-- Insert only empID here because salary is default
+
+select * from temp4;
+
+
+-- CHECK constraint in SQL
+create table temp5(
+	name varchar(50),
+    age int check (age >= 18)
+);
+insert into temp5 value("Narayan",21);
+-- insert into temp5 value("Sagar", 17);	-- check constranint shows error here because age<18
+
+select * from temp5;
